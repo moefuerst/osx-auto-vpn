@@ -11,8 +11,8 @@ CONFIGURATION
 Note: Make the following configurations BEFORE running install.sh!
 
 * Open connect.scpt using AppleScript-Editor and change "My VPN" to the name of your
-  VPN connection as found in System Preferences > Network (In the list of your services
-  on the left)
+  VPN connection as found in System Preferences > Network (In the list of your 
+  services on the left)
   
 * Edit the "config" file using a text editor of your choice and enter your network 
   information according to the following example. If you are always on WiFi, you can 
@@ -30,5 +30,7 @@ you have put osx auto vpn in and run ./install.sh
 
 
 LOG File
-Per default, osx auto vpn puts a log file including all its detections in ~/.osxvpn.log
+Per default, osx auto vpn puts a log file including all its detections in 
+~/.osxautovpn.log
+
 Comment that out in autovpn.sh (before running the install script) if you don't need this.
