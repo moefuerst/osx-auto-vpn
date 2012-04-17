@@ -7,7 +7,7 @@
 	<string>com.mof.autovpn</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>HOME_DIR/bin/autovpn</string>
+		<string>HOME_DIR/.osxautovpn/osxautovpn</string>
 	</array>
 	<key>WatchPaths</key>
 	<array>

@@ -20,7 +20,7 @@ SSIDS=()
 EN0IPS=()
 EN1IPS=()
 
-. HOME_DIR/Library/Application\ Support/osxautovpn/config
+. HOME_DIR/.osxautovpn/config
 
 for (( i = 0 ; i < ${#LOCATIONS[@]} ; i++ )); do
     if [ "${SSID}" = "${SSIDS[$i]}" ]; then
@@ -49,7 +49,7 @@ if [ -z $LOCATION ]; then
         REASON="Can't identify location"
         
         # connect to vpn
-		osascript "HOME_DIR/Library/Application Support/osxautovpn/connect.scpt"
+		osascript "HOME_DIR/.osxautovpn/connect.scpt"
 fi
 
 

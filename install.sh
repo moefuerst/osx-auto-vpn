@@ -2,23 +2,23 @@
 
 echo "installing osx auto vpn"
 
-if [ ! -e "${HOME}/Library/Application\ Support/osxautovpn" ]; then
-  echo "creating ~/Library/Application Support/osxautovpn"
-  mkdir -p ~/Library/Application\ Support/osxautovpn
-  echo "writing ~/Library/Application Support/osxautovpn/connect.scpt"
-  cp ./connect.scpt ~/Library/Application\ Support/osxautovpn/connect.scpt
-  echo "writing ~/Library/Application Support/osxautovpn/config"
-  cp ./config ~/Library/Application\ Support/osxautovpn/config
+if [ ! -e "${HOME}/.osxautovpn" ]; then
+  echo "creating ~/.osxautovpn"
+  mkdir -p ~/.osxautovpn
+  echo "writing ~/.osxautovpn/connect.scpt"
+  cp ./connect.scpt ~/.osxautovpn/connect.scpt
+  echo "writing ~/.osxautovpn/config"
+  cp ./config ~/.osxautovpn/config
 fi
 
-if [ ! -e "${HOME}/bin/osxautovpn" ]; then
+if [ ! -e "${HOME}/.osxautovpn/osxautovpn" ]; then
   echo "writing ./osxautovpn.sh"
   sed "s:HOME_DIR:${HOME}:g" < ./autovpn.sh > ./osxautovpn.sh
   echo "making executable ./osxautovpn"
   cat ./osxautovpn.sh > ./osxautovpn
   chmod +x ./osxautovpn
-  echo "writing usr/bin/osxautovpn"
-  sudo mv ./osxautovpn /usr/bin
+  echo "writing ~/.osxautovpn/osxautovpn"
+  mv ./osxautovpn ~/.osxautovpn
   rm ./osxautovpn.sh
 fi
 
