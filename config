@@ -1,0 +1,14 @@
+# CONFIG
+#
+# Enter your network information in the following form (If you are always on WiFi,
+# you can leave the EN_IPS part empty):
+#
+# LOCATIONS=(HOME OFFICE GIRLFRIEND)
+# SSIDS=(MyOfficeWLAN MyHomeWLAN MyGfWLAN)
+# EN0IPS=(192.168. 10.0.0. 192.168.0.)
+# EN1IPS=(192.168. 10.0.0. 192.168.0.)
+
+LOCATIONS=()
+SSIDS=()
+EN0IPS=()
+EN1IPS=()
