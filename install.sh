@@ -12,12 +12,14 @@ if [ ! -e "${HOME}/Library/Application\ Support/osxautovpn" ]; then
 fi
 
 if [ ! -e "${HOME}/bin/osxautovpn" ]; then
-  echo "writing ~/bin/osxautovpn.sh"
-  sed "s:HOME_DIR:${HOME}:g" < ./osxautovpn.sh > ~/bin/osxautovpn.sh
-  echo "making executable ~/bin/osxautovpn"
-  cat ~/bin/osxautovpn.sh > ~/bin/osxautovpn
-  chmod +x ~/bin/osxautovpn
-  rm ~/bin/osxautovpn.sh
+  echo "writing ./osxautovpn.sh"
+  sed "s:HOME_DIR:${HOME}:g" < ./autovpn.sh > ./osxautovpn.sh
+  echo "making executable ./osxautovpn"
+  cat ./osxautovpn.sh > ./osxautovpn
+  chmod +x ./osxautovpn
+  echo "writing usr/bin/osxautovpn"
+  sudo mv ./osxautovpn /usr/bin
+  rm ./osxautovpn.sh
 fi
 
 if [ ! -e "${HOME}/Library/LaunchAgents" ]; then

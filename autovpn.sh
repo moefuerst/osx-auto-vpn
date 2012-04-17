@@ -49,7 +49,7 @@ if [ -z $LOCATION ]; then
         REASON="Can't identify location"
         
         # connect to vpn
-		osascript "HOME_DIR/Library/Application\ Support/osxautovpn/connect.scpt"
+		osascript "HOME_DIR/Library/Application Support/osxautovpn/connect.scpt"
 fi
 
 
